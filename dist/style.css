@@ -8,11 +8,6 @@ body {
   margin: 0;
 }
 
-#content {
-  /* position: relative;
-  display: flex; */
-}
-
 nav {
   position: relative;
   height: 100dvh;
