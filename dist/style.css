@@ -6,10 +6,11 @@
 
 body {
   margin: 0;
+  background-color: rgb(51, 51, 51);
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   height: 100dvh;
   width: 100%;
   max-width: 572px;
@@ -49,14 +50,6 @@ nav > button:hover {
   grid-row: 2 / 3;
 }
 
-.button_add_task {
-  grid-row: 3 / 4;
-}
-
-.button_remove_task {
-  grid-row: 4 / 5;
-}
-
 #button_toggle_menu {
   grid-row: 10 / 11;
   position: relative;
@@ -90,7 +83,7 @@ nav > button:hover {
 
 .page {
   width: 100%;
-  height: 100dvh;
+  /* height: 100dvh; */
   background-color: rgb(51, 51, 51);
   display: grid;
   grid-template-rows: repeat(4, 1fr);
@@ -100,8 +93,76 @@ nav > button:hover {
 .card {
   grid-column: 2 / 3;
   max-width: 100%;
-  max-height: 100%;
+  min-height: 400px;
   background-color: rgb(92, 92, 92);
   border-radius: 2rem;
   margin: 1rem;
+}
+
+.header_text {
+  margin: 0.25rem;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+  padding-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rema;
+  font-weight: bolder;
+  color: white;
+}
+
+form {
+  grid-row: 2 / 9;
+  height: 100%;
+  background-color: rgb(22, 22, 22);
+  display: grid;
+  grid-template-columns: 1fr 8fr 1fr;
+  grid-template-rows: repeat(10, 1fr);
+}
+
+.form_p_header {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  text-align: center;
+  font-size: 1.5rema;
+  font-weight: bolder;
+  color: white;
+}
+
+#input_task_name {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+  text-align: center;
+}
+
+.iro,
+.ird,
+.irp,
+.irc {
+  grid-column: 2 / 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+}
+
+.iro {
+  grid-row: 5 / 6;
+}
+
+.ird {
+  grid-row: 6 / 7;
+}
+
+.irp {
+  grid-row: 7 / 8;
+}
+
+.irc {
+  grid-row: 8 / 9;
+}
+
+#submit_btn {
+  grid-column: 2 / 3;
+  grid-row: 10 / 11;
+  border-radius: 2rem;
 }
