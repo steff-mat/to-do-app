@@ -92,16 +92,24 @@ nav > button:hover {
 
 .card {
   grid-column: 2 / 3;
-  max-width: 100%;
+  justify-self: center;
+  width: 100%;
+  max-width: 768px;
   min-height: 400px;
   background-color: rgb(92, 92, 92);
   border-radius: 2rem;
   margin: 1rem;
 }
 
+.card_item {
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem;
+  color: aliceblue;
+}
+
 .header_text {
   margin: 0.25rem;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
   padding-bottom: 1rem;
   text-align: center;
   font-size: 1.5rema;
@@ -165,4 +173,40 @@ form {
   grid-column: 2 / 3;
   grid-row: 10 / 11;
   border-radius: 2rem;
+}
+
+#ongoing > .header_text {
+  color: lightblue;
+  border-bottom: 2px solid lightblue;
+}
+
+#ongoing > .card_item {
+  border-bottom: 2px solid lightblue;
+}
+
+#overdue > .header_text {
+  color: lightcoral;
+  border-bottom: 2px solid lightcoral;
+}
+
+#overdue > .card_item {
+  border-bottom: 2px solid lightcoral;
+}
+
+#pending > .header_text {
+  color: lightsalmon;
+  border-bottom: 2px solid lightsalmon;
+}
+
+#pending > .card_item {
+  border-bottom: 2px solid lightsalmon;
+}
+
+#completed > .header_text {
+  color: lightgreen;
+  border-bottom: 2px solid lightgreen;
+}
+
+#completed > .card_item {
+  border-bottom: 2px solid lightgreen;
 }
