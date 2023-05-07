@@ -13,6 +13,5 @@ export default function Completed() {
     "Completed Todo's"
   );
   SetClass('.completed_header_text', 'class', 'header_text');
-
   storageLooper('input_radio_completed', '#completed');
 }

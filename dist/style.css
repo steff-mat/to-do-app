@@ -68,6 +68,7 @@ nav > button:hover {
   width: 3rem;
   border-radius: 0 2rem 2rem 0;
 }
+
 .show_btm::before {
   padding-left: 0.5rem;
   font-family: 'Courier New', Courier, monospace;
@@ -75,10 +76,23 @@ nav > button:hover {
 }
 
 .show_btm:hover {
-  width: 8rem;
+  width: 3rem;
+  background-color: grey;
+  color: white;
 }
-.show_btm:hover::before {
-  content: 'Open';
+
+.show_btm:active {
+  background-color: grey;
+}
+
+@media screen and (min-width: 768px) {
+  .show_btm:hover::before {
+    content: 'Open';
+  }
+
+  .show_btm:hover {
+    width: 8rem;
+  }
 }
 
 .page {
