@@ -1,6 +1,6 @@
 import CreateElement from '../../logic/CreateElement';
 import SetClass from '../../logic/SetClass';
-import storageLooper from '../../logic/storageLooper';
+import StorageLooper from '../../logic/storageLooper';
 
 export default function Completed() {
   CreateElement('div', 'id', 'completed', '.page', '');
@@ -13,5 +13,5 @@ export default function Completed() {
     "Completed Todo's"
   );
   SetClass('.completed_header_text', 'class', 'header_text');
-  storageLooper('input_radio_completed', '#completed');
+  StorageLooper('input_radio_completed', '#completed');
 }

@@ -31,7 +31,7 @@ button {
 }
 
 nav > button {
-  width: 80%;
+  width: 100%;
   height: 100px;
   max-height: 250px;
   text-align: left;
@@ -41,7 +41,6 @@ nav > button {
 }
 
 nav > button:hover {
-  width: 100%;
   background-color: rgb(245, 245, 245);
   color: black;
 }
@@ -85,23 +84,14 @@ nav > button:hover {
   background-color: grey;
 }
 
-@media screen and (min-width: 768px) {
-  .show_btm:hover::before {
-    content: 'Open';
-  }
-
-  .show_btm:hover {
-    width: 8rem;
-  }
-}
-
 .page {
   width: 100%;
   /* height: 100dvh; */
   background-color: rgb(51, 51, 51);
   display: grid;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(4, auto);
   grid-template-columns: 1fr 8fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
 }
 
 .card {
@@ -109,7 +99,7 @@ nav > button:hover {
   justify-self: center;
   width: 100%;
   max-width: 768px;
-  min-height: 400px;
+  min-height: 100px;
   background-color: rgb(92, 92, 92);
   border-radius: 2rem;
   margin: 1rem;
@@ -126,7 +116,7 @@ nav > button:hover {
   margin: 0.25rem;
   padding-bottom: 1rem;
   text-align: center;
-  font-size: 1.5rema;
+  font-size: 1.5rem;
   font-weight: bolder;
   color: white;
 }
@@ -165,6 +155,7 @@ form {
   justify-content: center;
   font-size: 1.5rem;
   color: white;
+  word-wrap: break-word;
 }
 
 .iro {
@@ -223,4 +214,32 @@ form {
 
 #completed > .card_item {
   border-bottom: 2px solid lightgreen;
+}
+
+@media screen and (min-width: 768px) {
+  #content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  nav {
+    position: fixed;
+    grid-column: 1 / 2;
+  }
+  .pos_relat {
+    position: relative !important;
+  }
+  .page {
+    grid-column: 1 / 3;
+  }
+  .page_23 {
+    grid-column: 2 / 3;
+  }
+
+  .show_btm:hover::before {
+    content: 'Open';
+  }
+
+  .show_btm:hover {
+    width: 8rem;
+  }
 }

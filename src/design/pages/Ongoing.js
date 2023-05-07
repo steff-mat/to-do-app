@@ -1,6 +1,6 @@
 import CreateElement from '../../logic/CreateElement';
 import SetClass from '../../logic/SetClass';
-import storageLooper from '../../logic/storageLooper';
+import StorageLooper from '../../logic/storageLooper';
 
 export default function Ongoing() {
   CreateElement('div', 'id', 'ongoing', '.page', '');
@@ -13,6 +13,5 @@ export default function Ongoing() {
     "Ongoing Todo's"
   );
   SetClass('.ongoing_header_text', 'class', 'header_text');
-
-  storageLooper('input_radio_ongoing', '#ongoing');
+  StorageLooper('input_radio_ongoing', '#ongoing');
 }

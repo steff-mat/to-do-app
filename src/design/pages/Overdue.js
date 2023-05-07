@@ -1,6 +1,6 @@
 import CreateElement from '../../logic/CreateElement';
 import SetClass from '../../logic/SetClass';
-import storageLooper from '../../logic/storageLooper';
+import StorageLooper from '../../logic/storageLooper';
 
 export default function Overdue() {
   CreateElement('div', 'id', 'overdue', '.page', '');
@@ -13,6 +13,5 @@ export default function Overdue() {
     "Overdue Todo's"
   );
   SetClass('.overdue_header_text', 'class', 'header_text');
-
-  storageLooper('input_radio_overdue', '#overdue');
+  StorageLooper('input_radio_overdue', '#overdue');
 }

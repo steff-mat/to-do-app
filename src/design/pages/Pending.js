@@ -1,6 +1,6 @@
 import CreateElement from '../../logic/CreateElement';
 import SetClass from '../../logic/SetClass';
-import storageLooper from '../../logic/storageLooper';
+import StorageLooper from '../../logic/storageLooper';
 
 export default function Pending() {
   CreateElement('div', 'id', 'pending', '.page', '');
@@ -13,6 +13,5 @@ export default function Pending() {
     "Pending Todo's"
   );
   SetClass('.pending_header_text', 'class', 'header_text');
-
-  storageLooper('input_radio_pending', '#pending');
+  StorageLooper('input_radio_pending', '#pending');
 }

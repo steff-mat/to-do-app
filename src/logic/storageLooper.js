@@ -1,8 +1,6 @@
 import CreateElement from './CreateElement';
-import SetCustom from './SetCustom';
-import TodoRemover from './TodoRemover';
 
-export default function storageLooper(status, location) {
+export default function StorageLooper(status, location) {
   for (let i = 0; i < localStorage.length; i++) {
     let object = JSON.parse(localStorage.getItem(localStorage.key(i)));
     const checker = object.ir_state;
