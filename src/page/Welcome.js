@@ -107,6 +107,6 @@ export default function Welcome() {
   CreateElement('button', 'id', 'todo_submit', '#todo_form', 'Create To-Do');
   CreateClass('#todo_submit', 'type', 'submit');
 
-  ToDo();
+  //   ToDo();
   StorageHandler();
 }
