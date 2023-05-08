@@ -1,6 +1,7 @@
 import CreateElement from '../script/CreateElement';
 import CreateClass from '../script/CreateClass';
 import StorageHandler from '../script/StorageHandler,js';
+import TodayDate from '../script/TodayDate';
 
 export default function Welcome() {
   CreateElement('div', 'id', 'main_menu', '#content', '');
@@ -27,6 +28,7 @@ export default function Welcome() {
   CreateClass('#todo_date', 'name', 'todo_name_date');
   CreateClass('#todo_date', 'min', '2023-01-01');
   CreateClass('#todo_date', 'max', '2099-01-01');
+  TodayDate();
 
   //Description State
   CreateElement('input', 'id', 'todo_description', '#todo_form', '');

@@ -5,7 +5,7 @@ export default function ProjectRetriver(location) {
     let object = JSON.parse(localStorage.getItem(localStorage.key(i)));
 
     CreateElement(
-      'div',
+      'button',
       'class',
       'project_item',
       location,
