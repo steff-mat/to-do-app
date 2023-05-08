@@ -1,5 +1,5 @@
-import Nav from './design/Nav';
-import Page from './design/Page';
+import ToDo from './page/ToDo';
+import Welcome from './page/Welcome';
 
-Nav();
-Page();
+Welcome();
+// ToDo();
