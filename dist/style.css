@@ -38,7 +38,7 @@ body {
 
 #todo_form {
   grid-column: 1/7;
-  padding: 0 0.5rem;
+  padding: 0.5rem 0.5rem;
   grid-row: 4/10;
   background-color: rgb(43, 43, 43);
   display: grid;
@@ -53,7 +53,7 @@ body {
   text-align: center;
 }
 
-#todo_state {
+/* #todo_state {
   grid-column: 1/5;
   grid-row: 2/3;
   display: flex;
@@ -62,7 +62,7 @@ body {
   justify-content: space-evenly;
   font-size: 1.5rem;
   text-align: center;
-}
+} */
 
 .ongoing_state {
   color: lightblue;
@@ -80,16 +80,22 @@ body {
   color: lightgreen;
 }
 
+.h4_date_explanation {
+  grid-column: 2/4;
+  grid-row: 2/3;
+  color: white;
+}
+
 #todo_date {
   grid-column: 1/5;
-  grid-row: 3/4;
+  grid-row: 2/3;
   text-align: center;
   width: 100%;
 }
 
 #todo_description {
   grid-column: 1/5;
-  grid-row: 4/6;
+  grid-row: 3/6;
   text-align: center;
 }
 
@@ -108,6 +114,26 @@ body {
   width: auto;
   height: 2rem;
   background-color: lightcyan;
+}
+
+#open_projects {
+  grid-column: 1/7;
+  grid-row: 10/15;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+  gap: 2rem;
+}
+
+.project_item {
+  min-width: 10rem;
+  min-height: 2.5rem;
+  background-color: lightgray;
+  border: 2px solid white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 @media screen and (min-width: 786px) {
