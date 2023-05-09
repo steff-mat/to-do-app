@@ -6,11 +6,15 @@ export default function TaskHandler(formName) {
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     console.log(JSON.parse(localStorage.getItem(projectHeader)));
+    // let item = document.querySelector('#list_todo_value').name;
     const formData = new FormData(form);
+    // console.log(Object.fromEntries(formData.entries()));
     let currentValue = JSON.parse(localStorage.getItem(projectHeader));
-    for (let [name, value] of formData.entries()) {
-      currentValue[name] = value;
-    }
+    currentValue[projectHeader] = Object.fromEntries(formData.entries());
+    // currentValue[value].push(Object.fromEntries(formData.entries()));
+    // for (let [name, value] of formData.entries()) {
+    //   currentValue[name] = value;
+    // }
     localStorage.setItem(projectHeader, JSON.stringify(currentValue));
   });
 }
