@@ -12,6 +12,6 @@ export default function ProjectRetriver(location) {
       object.todo_project_name_value
     );
 
-    console.log(JSON.parse(localStorage.getItem(localStorage.key(i))));
+    // console.log(JSON.parse(localStorage.getItem(localStorage.key(i))));
   }
 }

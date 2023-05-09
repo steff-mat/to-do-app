@@ -28,7 +28,7 @@ export default function Welcome() {
   CreateClass('#todo_date', 'name', 'todo_name_date');
   CreateClass('#todo_date', 'min', '2023-01-01');
   CreateClass('#todo_date', 'max', '2099-01-01');
-  TodayDate();
+  TodayDate('#todo_date');
 
   //Description State
   CreateElement('input', 'id', 'todo_description', '#todo_form', '');
@@ -44,5 +44,5 @@ export default function Welcome() {
 
   ////////////////////////////////////////////////
 
-  StorageHandler();
+  StorageHandler('todo_form');
 }

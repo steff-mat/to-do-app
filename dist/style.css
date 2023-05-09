@@ -182,8 +182,16 @@ body {
   grid-row: 2/3;
 }
 
-#list_todo_name {
+#list_todo_name,
+#list_todo_date,
+#list_todo_description {
   text-align: center;
+}
+
+#list_todo_state {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 @media screen and (min-width: 786px) {

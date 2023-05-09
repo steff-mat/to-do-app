@@ -7,7 +7,6 @@ export default function ProjectLoader() {
 
   for (const button of buttons) {
     button.addEventListener('click', () => {
-      console.log(mainMenu);
       mainMenu.remove();
       List();
       ToDoList(button.innerText);
