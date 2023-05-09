@@ -1,4 +1,3 @@
-import CreateClass from '../script/CreateClass';
 import CreateElement from '../script/CreateElement';
 
 export default function List() {

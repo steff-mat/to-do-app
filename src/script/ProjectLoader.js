@@ -10,7 +10,7 @@ export default function ProjectLoader() {
       console.log(mainMenu);
       mainMenu.remove();
       List();
-      ToDoList();
+      ToDoList(button.innerText);
     });
   }
 }
