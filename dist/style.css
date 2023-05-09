@@ -147,6 +147,31 @@ body {
   justify-content: center;
 }
 
+#list_menu {
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+}
+
+.hide {
+  display: none !important;
+}
+
+#list_form_todo {
+  width: 100%;
+  height: 100dvh;
+  background-color: grey;
+  grid-row: 1/2;
+}
+
+#list_form_tasks {
+  width: 100%;
+  height: 100dvh;
+  background-color: lightpink;
+  grid-row: 2/3;
+}
+
 @media screen and (min-width: 786px) {
   /* #content {
     grid-template-columns: 1fr 1fr;
@@ -157,5 +182,23 @@ body {
   }
   #main_menu {
     background-color: rgb(49, 13, 13);
+  }
+  .project_item:hover {
+    background-color: white;
+  }
+
+  #list_menu {
+    grid-template-columns: 2fr 4fr;
+    grid-template-rows: 1fr;
+  }
+
+  #list_form_todo {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+
+  #list_form_tasks {
+    grid-column: 2/3;
+    grid-row: 1/2;
   }
 }

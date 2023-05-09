@@ -1,6 +1,6 @@
 import CreateElement from '../script/CreateElement';
 import CreateClass from '../script/CreateClass';
-import StorageHandler from '../script/StorageHandler,js';
+import StorageHandler from '../script/StorageHandler.js';
 import TodayDate from '../script/TodayDate';
 
 export default function Welcome() {
