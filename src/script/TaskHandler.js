@@ -1,23 +1,16 @@
-import FindKey from './FindKey';
-
 export default function TaskHandler(formName) {
-  const form = document.querySelector(formName);
-  const header = document.querySelector('.project_header');
+  const form = document.getElementById(formName);
+  const pH = document.querySelector('.project_header');
+  const projectHeader = pH.innerText.toLowerCase().replaceAll(' ', '');
 
-  for (let i = 0; i < localStorage.length; i++) {
-    let object = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    // FindKey(header, object);
-  }
-
-  // form.addEventListener('submit', function () {
-  //   const formData = new FormData(form);
-  //   const formDataObject = Object.fromEntries(formData.entries());
-  //   localStorage.setItem(`${id()}`, JSON.stringify(formDataObject));
-  // });
-
-  // function id() {
-  //   const timestamp = Date.now().toString(36);
-  //   const randomChars = Math.random().toString(36).slice(2);
-  //   return timestamp + randomChars;
-  // }
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    console.log(JSON.parse(localStorage.getItem(projectHeader)));
+    const formData = new FormData(form);
+    let currentValue = JSON.parse(localStorage.getItem(projectHeader));
+    for (let [name, value] of formData.entries()) {
+      currentValue[name] = value;
+    }
+    localStorage.setItem(projectHeader, JSON.stringify(currentValue));
+  });
 }

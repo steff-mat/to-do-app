@@ -36,7 +36,7 @@ export default function ToDoList(header_text) {
       //Date State
       CreateElement('input', 'id', 'list_todo_date', '#list_form_todo', '');
       CreateClass('#list_todo_date', 'type', 'date', '#list_form_todo');
-      CreateClass('#list_todo_date', 'name', 'todo_name_date');
+      CreateClass('#list_todo_date', 'name', 'list_todo_name_date');
       CreateClass('#list_todo_date', 'min', '2023-01-01');
       CreateClass('#list_todo_date', 'max', '2099-01-01');
       TodayDate('#list_todo_date');
@@ -132,8 +132,8 @@ export default function ToDoList(header_text) {
         'Create Todo'
       );
       CreateClass('#list_todo_submit', 'type', 'submit');
-      StorageHandler('list_form_todo');
-      // TaskHandler('#list_todo_state');
+      // StorageHandler('list_form_todo', '#list_todo_name');
+      TaskHandler('list_form_todo');
     }
   }
 }

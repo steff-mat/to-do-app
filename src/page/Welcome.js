@@ -2,6 +2,7 @@ import CreateElement from '../script/CreateElement';
 import CreateClass from '../script/CreateClass';
 import StorageHandler from '../script/StorageHandler.js';
 import TodayDate from '../script/TodayDate';
+import CLEAR from '../script/CLEAR';
 
 export default function Welcome() {
   CreateElement('div', 'id', 'main_menu', '#content', '');
@@ -14,6 +15,7 @@ export default function Welcome() {
     '#main_menu',
     'Create a new To-Do or select an existing one'
   );
+  CLEAR();
 
   CreateElement('form', 'id', 'todo_form', '#main_menu', '');
 
@@ -44,5 +46,5 @@ export default function Welcome() {
 
   ////////////////////////////////////////////////
 
-  StorageHandler('todo_form');
+  StorageHandler('todo_form', '#todo_name');
 }
