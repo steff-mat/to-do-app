@@ -1,33 +1,32 @@
 import CreateElement from '../script/CreateElement';
 import CreateClass from '../script/CreateClass';
 import TodayDate from '../script/TodayDate';
-import StorageHandler from '../script/StorageHandler';
 import TaskHandler from '../script/TaskHandler';
 
 export default function ToDoList(header_text) {
-  for (let i = 0; i < localStorage.length; i++) {
-    let object = JSON.parse(localStorage.getItem(localStorage.key(i)));
-    if (object.todo_project_name_value === header_text) {
+  let object = JSON.parse(localStorage.getItem(localStorage.key('to-do-app')));
+  for (let i = 0; i < object.length; i++) {
+    if (object[i].todo_project_name_value === header_text) {
       CreateElement(
         'h1',
         'class',
         'project_header',
         '#list_form_todo',
-        `${object.todo_project_name_value}`
+        `${object[i].todo_project_name_value}`
       );
       CreateElement(
         'h3',
         'class',
         'project_due_date',
         '#list_form_todo',
-        `Due Date: ${object.todo_name_date}`
+        `Due Date: ${object[i].todo_name_date}`
       );
       CreateElement(
         'h5',
         'class',
         'project_description',
         '#list_form_todo',
-        `Description: ${object.todo_project_name_description}`
+        `Description: ${object[i].todo_project_name_description}`
       );
       //Project name input field
       CreateElement('input', 'id', 'list_todo_name', '#list_form_todo', '');
@@ -132,7 +131,6 @@ export default function ToDoList(header_text) {
         'Create Todo'
       );
       CreateClass('#list_todo_submit', 'type', 'submit');
-      // StorageHandler('list_form_todo', '#list_todo_name');
       TaskHandler('list_form_todo');
     }
   }

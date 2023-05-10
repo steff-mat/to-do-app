@@ -5,11 +5,12 @@ export default function TaskHandler(formName) {
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
-    const formData = new FormData(form);
-    let currentValue = JSON.parse(localStorage.getItem(projectHeader));
-    const taskList = [];
-    taskList.push(Object.fromEntries(formData.entries()));
-    currentValue[projectHeader] = taskList;
-    localStorage.setItem(projectHeader, JSON.stringify(currentValue));
+    let projectList = JSON.parse(localStorage.getItem('to-do-app')) || [];
+    // const formData = new FormData(form);
+    // let currentValue = JSON.parse(localStorage.getItem('to-do-app'));
+    // const taskList = [];
+    // taskList.push(Object.fromEntries(formData.entries()));
+    // currentValue[projectHeader] = taskList;
+    // localStorage.setItem(projectHeader, JSON.stringify(currentValue));
   });
 }
