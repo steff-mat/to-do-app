@@ -2,14 +2,10 @@ export default function StorageHandler(formValue, name) {
   const form = document.getElementById(formValue);
 
   form.addEventListener('submit', function (e) {
-    // e.preventDefault();
     const formData = new FormData(form);
-    const formDataObject = Object.fromEntries(formData.entries());
-    localStorage.setItem(`${id()}`, JSON.stringify(formDataObject));
+    const newProject = Object.fromEntries(formData.entries());
+    let projectList = JSON.parse(localStorage.getItem('to-do-app')) || [];
+    projectList.push(newProject);
+    localStorage.setItem('to-do-app', JSON.stringify(projectList));
   });
-
-  function id() {
-    const nameText = document.querySelector(name).value;
-    return nameText.toLowerCase().replaceAll(' ', '');
-  }
 }
