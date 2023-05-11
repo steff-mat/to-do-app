@@ -1,6 +1,7 @@
 import { Element } from '../codeJS/createElement';
 import { Identity } from '../codeJS/createIdentity';
-import dropdown from '../codeJS/dropdown';
+import dropdownProjects from '../codeJS/dropdownProjects';
+import dropdownStatus from '../codeJS/dropdownStatus';
 import GetActualDate from '../codeJS/GetActualDate';
 
 export default function taskForm() {
@@ -83,6 +84,23 @@ export default function taskForm() {
   new Identity('task_form_input_date', 'max', '2099-01-01', '');
   GetActualDate('task_form_input_date');
 
+  //Status selection
+  new Element('div', 'id', 'div_task_form_input_status', '', 'task_form');
+  new Element(
+    'labe',
+    'id',
+    'label_task_form_input_status',
+    'Set status: ',
+    'div_task_form_input_status'
+  );
+  new Element(
+    'select',
+    'id',
+    'task_form_input_status',
+    '',
+    'div_task_form_input_status'
+  );
+
   //Assigner task
   new Element('div', 'id', 'div_task_form_input_assign', '', 'task_form');
   new Element(
@@ -99,7 +117,8 @@ export default function taskForm() {
     '',
     'div_task_form_input_assign'
   );
-  dropdown();
+  dropdownProjects();
+  dropdownStatus();
 
   //Button section
   new Element('button', 'id', 'task_submit_button', '', 'task_form');

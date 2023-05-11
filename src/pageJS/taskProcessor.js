@@ -11,6 +11,7 @@ export default function taskProcessor() {
       taskDescription: document.getElementById('task_form_input_description')
         .value,
       taskDueDate: document.getElementById('task_form_input_date').value,
+      taskStatus: document.getElementById('task_form_input_status').value,
       taskProject: document.getElementById('task_form_input_assign').value,
     };
     projectForm.list.push(taskForm);
