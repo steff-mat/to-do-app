@@ -69,8 +69,10 @@ export default function taskLooper() {
       document
         .getElementById(`task_item_button_p${i}_t${j}`)
         .addEventListener('click', () => {
-          console.log(JSON.parse(localStorage.getItem(localStorage.key(i))));
-          localStorage.removeItem(project[j]);
+          const key = localStorage.key(i);
+          const project = JSON.parse(localStorage.getItem(key));
+          project.list.splice(j, 1);
+          localStorage.setItem(key, JSON.stringify(project));
           document.getElementById(`task_item_holder_p${i}_t${j}`).remove();
         });
     }
