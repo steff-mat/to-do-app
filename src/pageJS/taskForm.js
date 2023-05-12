@@ -1,5 +1,6 @@
 import { Element } from '../codeJS/createElement';
 import { Identity } from '../codeJS/createIdentity';
+import dropdownFilterProcessor from '../codeJS/dropdownFilterProcessor';
 import dropdownProjects from '../codeJS/dropdownProjects';
 import dropdownStatus from '../codeJS/dropdownStatus';
 import GetActualDate from '../codeJS/GetActualDate';
@@ -110,6 +111,7 @@ export default function taskForm() {
     'Assign task to: ',
     'div_task_form_input_assign'
   );
+
   new Element(
     'select',
     'id',
@@ -119,6 +121,7 @@ export default function taskForm() {
   );
   dropdownProjects();
   dropdownStatus();
+  dropdownFilterProcessor();
 
   //Button section
   new Element('button', 'id', 'task_submit_button', '', 'task_form');
