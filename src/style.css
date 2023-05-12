@@ -7,6 +7,7 @@
 
 * {
   box-sizing: border-box;
+  padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
@@ -95,7 +96,8 @@ button:hover {
 }
 
 #task_holder button:hover {
-  background-color: var(--td-red);
+  background-color: var(--td-red) !important;
+  border: 1px solid var(--td-white);
 }
 
 #task_section {
@@ -110,6 +112,11 @@ button:hover {
   margin: 1rem 0;
 }
 
+#div_task_form_input_date {
+  display: flex;
+  flex-direction: column;
+}
+
 #task_holder {
   display: flex;
   justify-content: center;
@@ -119,13 +126,20 @@ button:hover {
 #task_holder div {
   margin: 1rem;
   flex-direction: column;
-  width: 20rem;
+  width: 15rem;
   border: 0.25rem solid var(--td-blue);
 }
 
 select > option,
 #task_form_input_date {
   text-align: center;
+}
+
+#task_form_input_date {
+  margin: 0 auto;
+  /* min-width: 100%; */
+  min-width: fit-content;
+  max-width: 100%;
 }
 
 #task_form div {
@@ -151,6 +165,11 @@ select > option,
 
 #task_form {
   border-bottom: 2px solid var(--td-white);
+}
+
+#task_filter_select_status {
+  text-align: center;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 768px) {
@@ -189,8 +208,6 @@ select > option,
     grid-row: 2/3;
   }
 
-  input,
-  button,
   input,
   button,
   select,

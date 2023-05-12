@@ -1,4 +1,14 @@
+import { Element } from '../codeJS/createElement';
+
 export default function dropdownFilterProject() {
+  new Element(
+    'option',
+    'id',
+    'all_project',
+    'All',
+    'task_filter_select_project'
+  );
+
   const localStorageKeys = Object.keys(localStorage);
   const select = document.getElementById('task_filter_select_project');
 
