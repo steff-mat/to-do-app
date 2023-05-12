@@ -1,4 +1,5 @@
 import { Element } from '../codeJS/createElement';
+import dropdownFilterProcessor from '../codeJS/dropdownFilterProcessor';
 import dropdownFilterProject from '../codeJS/dropdownFilterProject';
 import dropdownFilterStatus from '../codeJS/dropdownFilterStatus';
 
@@ -49,4 +50,5 @@ export default function taskFilter() {
   );
   dropdownFilterProject();
   dropdownFilterStatus();
+  dropdownFilterProcessor();
 }
