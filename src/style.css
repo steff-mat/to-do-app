@@ -80,3 +80,19 @@ button {
 #project_submit_button:hover {
   background-color: var(--td-blue);
 }
+
+@media screen and (max-width: 768px) {
+  #content {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  #project_section {
+    grid-column: 1/2;
+    grid-row: 1/2;
+  }
+  #task_section {
+    grid-column: 1/2;
+    grid-row: 2/3;
+  }
+}
