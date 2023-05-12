@@ -17,15 +17,11 @@ html {
 
 body {
   margin: 0;
-  /* background-color: var(--td-black); */
-  /* color: var(--td-white); */
 }
 
 input,
 button,
 select {
-  /* background-color: var(--td-white); */
-  /* color: var(--td-black); */
   font-size: 1.75rem;
   border: none;
 }
@@ -51,8 +47,8 @@ select {
 }
 
 #project_form {
-  margin-bottom: 2rem;
-  padding-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--td-white);
 }
 
 #project_form,
@@ -80,13 +76,10 @@ select {
 
 #project_holder > div {
   margin: 1rem 0;
-  /* background-color: var(--td-white); */
-  /* color: var(--td-black); */
 }
 
 #project_holder button:hover {
   background-color: var(--td-red);
-  /* height: 100%; */
 }
 
 #project_holder button:hover::before {
@@ -156,6 +149,10 @@ select > option,
   margin: 0.25rem 0.25rem;
 }
 
+#task_form {
+  border-bottom: 2px solid var(--td-white);
+}
+
 @media screen and (max-width: 768px) {
   #task_section {
     display: grid;
@@ -185,6 +182,7 @@ select > option,
   #project_section {
     grid-column: 1/2;
     grid-row: 1/2;
+    border-right: 0;
   }
   #task_section {
     grid-column: 1/2;
@@ -205,7 +203,7 @@ select > option,
   }
 
   #project_section {
-    border-bottom: 2px solid var(--td-blue);
+    border-bottom: 2px solid var(--td-white);
   }
 
   #task_section select {
@@ -218,6 +216,7 @@ select > option,
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
+    align-items: end;
   }
   #task_form {
     grid-column: 1/2;
@@ -230,5 +229,8 @@ select > option,
   #task_filter {
     grid-column: 2/3;
     grid-row: 1/2;
+    display: grid;
+    align-items: end;
+    border-bottom: 2px solid var(--td-white);
   }
 }
