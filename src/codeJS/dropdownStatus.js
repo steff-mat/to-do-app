@@ -8,6 +8,4 @@ export default function dropdownStatus() {
     option.text = status;
     select.append(option);
   }
-  const form = document.getElementById('task_form');
-  form.appendChild(select);
 }

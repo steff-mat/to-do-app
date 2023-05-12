@@ -17,7 +17,8 @@ body {
 }
 
 input,
-button {
+button,
+select {
   background-color: var(--td-white);
   color: var(--td-black);
   font-size: 2rem;
@@ -35,6 +36,7 @@ button {
   flex-direction: column;
   font-size: 2rem;
   text-align: center;
+  border-right: 2px solid var(--td-white);
 }
 
 #project_submit_button,
@@ -56,8 +58,11 @@ button {
   flex-direction: column;
 }
 
-#project_section input,
-#project_section button {
+input,
+button,
+input,
+button,
+select {
   height: 4rem;
   width: 100%;
   transition: all 200ms;
@@ -78,8 +83,43 @@ button {
   content: 'Delete: ';
 }
 
-#project_submit_button:hover {
+button:hover {
   background-color: var(--td-blue);
+}
+
+#task_holder button {
+  padding: 0;
+}
+
+#task_holder button:hover {
+  background-color: #f44336;
+}
+
+#task_section {
+  grid-column: 2/3;
+  display: flex;
+  flex-direction: column;
+  font-size: 2rem;
+  text-align: center;
+}
+
+#task_holder {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+#task_holder div {
+  margin: 1rem;
+  flex-direction: column;
+  width: 20rem;
+  border: 0.25rem solid var(--td-blue);
+}
+
+select > option,
+#task_form_input_date {
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {
@@ -96,12 +136,17 @@ button {
     grid-column: 1/2;
     grid-row: 2/3;
   }
-  #project_section input,
-  #project_section button {
+
+  input,
+  button,
+  input,
+  button,
+  select,
+  option {
     height: 2rem;
     font-size: 1.5rem;
   }
-  #project_section p {
+  p {
     font-size: 1.5rem;
   }
 }

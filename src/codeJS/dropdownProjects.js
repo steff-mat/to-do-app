@@ -10,7 +10,4 @@ export default function dropdown() {
     option.text = localStorageValue.projectName;
     select.appendChild(option);
   }
-
-  const form = document.getElementById('task_form');
-  form.appendChild(select);
 }
