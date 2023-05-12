@@ -10,7 +10,6 @@
   padding: 0;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
     Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1rem !important;
 }
 
 html {
@@ -24,7 +23,6 @@ body {
 input,
 button,
 select {
-  font-size: 1.75rem;
   border: none;
 }
 
@@ -37,7 +35,6 @@ select {
 #project_section {
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
   text-align: center;
   border-right: 2px solid var(--td-white);
 }
@@ -105,7 +102,6 @@ button:hover {
   grid-column: 2/3;
   display: flex;
   flex-direction: column;
-  font-size: 2rem;
   text-align: center;
 }
 
@@ -116,6 +112,8 @@ button:hover {
 #div_task_form_input_date {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  padding-bottom: 0.5rem;
 }
 
 #task_holder {
@@ -138,14 +136,7 @@ select > option,
 
 #task_form_input_date {
   margin: 0 auto;
-  /* min-width: 100%; */
-  min-width: fit-content;
-  max-width: 100%;
-}
-
-#task_form div {
-  border-bottom: 2px solid var(--td-black);
-  margin-bottom: 0.25rem 0;
+  min-width: 15rem;
 }
 
 #project_holder p {
@@ -156,12 +147,12 @@ select > option,
 #project_form,
 #task_holder,
 #task_form {
-  margin: 0 0.25rem;
+  /* margin: 0 0.25rem; */
 }
 
 #project_holder div {
   border: 2px solid var(--td-black);
-  margin: 0.25rem 0.25rem;
+  /* margin: 0.25rem 0.25rem; */
 }
 
 #task_form {
@@ -171,6 +162,12 @@ select > option,
 #task_filter_select_status {
   text-align: center;
   margin: 0 auto;
+}
+
+#project_section,
+#task_section {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 768px) {
@@ -214,18 +211,10 @@ select > option,
   select,
   option {
     height: 2rem;
-    font-size: 1.5rem;
-  }
-  p {
-    font-size: 1.5rem;
   }
 
   #project_section {
     border-bottom: 2px solid var(--td-white);
-  }
-
-  #task_section select {
-    font-size: 1rem;
   }
 }
 
@@ -250,5 +239,22 @@ select > option,
     display: grid;
     align-items: end;
     border-bottom: 2px solid var(--td-white);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  input,
+  button,
+  select,
+  option {
+    background-color: rgb(35, 35, 35);
+  }
+}
+@media (prefers-color-scheme: light) {
+  input,
+  button,
+  select,
+  option {
+    background-color: rgb(235, 235, 235);
   }
 }
