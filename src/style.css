@@ -60,6 +60,7 @@ button {
 #project_section button {
   height: 4rem;
   width: 100%;
+  transition: all 200ms;
 }
 
 #project_holder > div {
@@ -70,10 +71,12 @@ button {
 
 #project_holder button:hover {
   background-color: red;
-  display: flex;
 }
 
 #project_holder button:hover::before {
   content: 'Delete: ';
-  display: flex;
+}
+
+#project_submit_button:hover {
+  background-color: var(--td-blue);
 }
