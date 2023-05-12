@@ -1,5 +1,6 @@
 import { Element } from '../codeJS/createElement';
-import { Identity } from '../codeJS/createIdentity';
+import dropdownFilterProject from '../codeJS/dropdownFilterProject';
+import dropdownFilterStatus from '../codeJS/dropdownFilterStatus';
 
 export default function taskFilter() {
   new Element('form', 'id', 'task_filter', '', 'task_section');
@@ -46,4 +47,6 @@ export default function taskFilter() {
     'Apply Filter',
     'task_filter'
   );
+  dropdownFilterProject();
+  dropdownFilterStatus();
 }

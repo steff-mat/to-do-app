@@ -1,6 +1,6 @@
-export default function dropdown() {
+export default function dropdownFilterProject() {
   const localStorageKeys = Object.keys(localStorage);
-  const select = document.getElementById('task_form_input_assign');
+  const select = document.getElementById('task_filter_select_project');
 
   for (let i = 0; i < localStorage.length; i++) {
     const project = JSON.parse(localStorage.getItem(localStorage.key(i))).list;
