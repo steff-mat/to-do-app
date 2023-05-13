@@ -1,4 +1,5 @@
 import { Element } from '../codeJS/createElement';
+import { Identity } from '../codeJS/createIdentity';
 import dropdownFilterProcessor from '../codeJS/dropdownFilterProcessor';
 import dropdownFilterProject from '../codeJS/dropdownFilterProject';
 import dropdownFilterStatus from '../codeJS/dropdownFilterStatus';
@@ -41,13 +42,8 @@ export default function taskFilter() {
   );
 
   //Apply filter
-  new Element(
-    'button',
-    'id',
-    'task_filter_button',
-    'Apply Filter',
-    'task_filter'
-  );
+  new Element('button', 'id', 'task_filter_button', '', 'task_filter');
+  new Identity('task_filter_button', 'type', 'submit', 'Apply Filter');
   dropdownFilterProject();
   dropdownFilterStatus();
   dropdownFilterProcessor();

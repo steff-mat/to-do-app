@@ -121,7 +121,7 @@ export default function taskForm() {
   );
   dropdownProjects();
   dropdownStatus();
-  dropdownFilterProcessor();
+  // dropdownFilterProcessor();
 
   //Button section
   new Element('button', 'id', 'task_submit_button', '', 'task_form');
