@@ -128,11 +128,18 @@ button:hover {
 
 #task_form_input_date,
 #task_form_input_status,
-select option {
+select,
+option {
   margin: 0 auto;
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
+  text-align-last: center;
+  text-align: center;
+  -ms-text-align-last: center;
+  -moz-text-align-last: center;
+  text-align-last: center;
 }
 
 #project_holder p {
@@ -192,7 +199,7 @@ select option {
   #project_holder button::before {
     content: 'Delete: ';
   }
-  #project_holder button {
+  #project_holder button:hover {
     background-color: var(--td-red);
   }
   #content {
@@ -208,6 +215,16 @@ select option {
   #task_section {
     grid-column: 1/2;
     grid-row: 2/3;
+  }
+
+  #task_filter {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: auto auto;
+  }
+
+  #task_filter_button {
+    grid-column: 1/3;
   }
 
   input,
