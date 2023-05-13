@@ -29,6 +29,7 @@ export default function projectLooper() {
         );
         document.getElementById(`project_item_button_${i}`).remove();
         document.getElementById(`project_item_description_${i}`).remove();
+        location.reload();
       });
   }
 }

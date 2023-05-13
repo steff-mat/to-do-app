@@ -2,8 +2,8 @@ export default function taskProcessor() {
   const form = document.getElementById('task_form');
   const select = document.getElementById('task_form_input_assign');
   form.addEventListener('submit', (e) => {
-    const selectedValue = select.value;
     // e.preventDefault();
+    const selectedValue = select.value;
     let projectForm = JSON.parse(localStorage.getItem(selectedValue));
     const pF = localStorage.getItem(selectedValue);
     let taskForm = {
