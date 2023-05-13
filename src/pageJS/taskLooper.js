@@ -42,7 +42,7 @@ export default function taskLooper() {
 
       //Status
       new Element(
-        'p',
+        'button',
         'id',
         `task_item_status_p${i}_t${j}`,
         project[j].taskStatus,
